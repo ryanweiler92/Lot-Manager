@@ -22,7 +22,6 @@ public class Car {
     @Id
     @GeneratedValue
     private Long id;
-    private Instant date;
     private String make;
     private String model;
     private Integer year;
