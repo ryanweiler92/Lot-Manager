@@ -1,38 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Navigation from "./components/Navigation"
+import Home from "./pages/Home"
 
 
 function App() {
 
-  const [lots, setLots] = useState([]);
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-
-    fetch('api/lots')
-      .then(response => response.json())
-      .then(data => {
-        setLots(data);
-        setLoading(false);
-      })
-  }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
 
 
   return (
-    <div className="App">
-      {lots.map(lot => 
-        <div key={lot.id}>
-          {lot.name}
-          </div>
-          )}
+    <Router>
+      <Navigation />
+      <Home />
+    </Router>
 
-    </div>
   );
 }
 
