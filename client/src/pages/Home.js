@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 
@@ -45,6 +46,9 @@ const Home = () => {
                             <li className="list-group-item">State: {lot.state}</li>
                             <li className="list-group-item">ZIP: {lot.postalCode}</li>
                         </ul>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <Link className="btn btn-primary" as={Link} to={`/${lot.id}`} >View Lot</Link>
+                        </div>
                     </div>
                 </div>
             </div>
