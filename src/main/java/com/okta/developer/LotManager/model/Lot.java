@@ -23,7 +23,6 @@ public class Lot {
     private String address;
     private String city;
     private String state;
-    private String country;
     private String postalCode;
     @ManyToOne(cascade=CascadeType.PERSIST)
     private User user;

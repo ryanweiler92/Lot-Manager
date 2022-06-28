@@ -48,6 +48,7 @@ const Home = () => {
                         </ul>
                         <div className="d-flex justify-content-center align-items-center">
                             <Link className="btn btn-primary" as={Link} to={`/${lot.id}`} >View Lot</Link>
+                            <Link className="btn btn-danger" as={Link} to={"/lot/" + lot.id}>Edit Lot</Link>
                         </div>
                     </div>
                 </div>

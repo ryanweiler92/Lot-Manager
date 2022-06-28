@@ -62,9 +62,12 @@ const IndividualLot = () => {
 
             </div>
             
-            <div className="row justify-content-center mt-4">
-                <div className="col-6">
-                <form>
+            <div className="row justify-content-center mt-5">
+                <div className="col-6 border">
+                <form className="p-4">
+                    <div>
+                        <h3 className="text-center">Enter a new vehicle</h3>
+                    </div>
                     <div className="form-outline mb-4">
                         <label className="form-label" for="make">Make</label>
                         <input type="text" id="make" className="form-control" />
@@ -88,6 +91,10 @@ const IndividualLot = () => {
                     <div className="form-outline mb-4">
                         <label className="form-label" for="image">Image URL</label>
                         <input type="text" id="image" className="form-control" />
+                    </div>
+
+                    <div className="d-flex justify-content-center">
+                        <button className="btn btn-primary">Submit Vehicle</button>
                     </div>
 
                 </form>

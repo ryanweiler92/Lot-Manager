@@ -38,7 +38,7 @@ class LotController {
     }
 
     @PostMapping("/lot")
-    ResponseEntity<Lot> createGroup(@Valid @RequestBody Lot lot) throws URISyntaxException {
+    ResponseEntity<Lot> createLot(@Valid @RequestBody Lot lot) throws URISyntaxException {
         log.info("Request to create lot: {}", lot);
         Lot result = lotRepository.save(lot);
         return ResponseEntity.created(new URI("/api/lot/" + result.getId()))
@@ -46,14 +46,14 @@ class LotController {
     }
 
     @PutMapping("/lot/{id}")
-    ResponseEntity<Lot> updateGroup(@Valid @RequestBody Lot lot) {
+    ResponseEntity<Lot> updateLot(@Valid @RequestBody Lot lot) {
         log.info("Request to update lot: {}", lot);
         Lot result = lotRepository.save(lot);
         return ResponseEntity.ok().body(result);
     }
 
     @DeleteMapping("/lot/{id}")
-    public ResponseEntity<?> deleteGroup(@PathVariable Long id) {
+    public ResponseEntity<?> deleteLot(@PathVariable Long id) {
         log.info("Request to delete lot: {}", id);
         lotRepository.deleteById(id);
         return ResponseEntity.ok().build();
