@@ -34,6 +34,12 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className="row align-items-center justify-content-center mt-4">
+                <div className="col-4 d-flex justify-content-center">
+                    <Link className="btn btn-primary" as={Link} to={"/lot/new"}>Add Lot</Link>
+                </div>
+            </div>
+
             <div className="row justify-content-center mt-4">
             {lots.map(lot => 
             <div className="col-4">

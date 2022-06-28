@@ -61,7 +61,7 @@ const LotEdit = () => {
                     
                     <div className="form-outline mb-4">
                         <label className="form-label" htmlFor="name">Name</label>
-                        <input type="text" id="name" className="form-control" value={lot.name || ""} onChange={handleChange} autoComplete="address-level1"/>
+                        <input type="text" id="name" className="form-control" name="name" value={lot.name || ""} onChange={(event) => handleChange(event)} autoComplete="address-level1"/>
                     </div>
 
                     <div className="form-outline mb-4">
